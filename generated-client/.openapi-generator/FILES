@@ -1,0 +1,13 @@
+.gitignore
+.npmignore
+.openapi-generator-ignore
+api.ts
+base.ts
+common.ts
+configuration.ts
+docs/CreateTask.md
+docs/Task.md
+docs/TasksApi.md
+docs/UpdateTask.md
+git_push.sh
+index.ts
