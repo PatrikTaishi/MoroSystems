@@ -4,6 +4,9 @@ export class HomePage {
   constructor(private page: Page) { }
 
   async goToCareers() {
-    await this.page.locator('header').getByRole('link', { name: 'Kariéra' }).click();
+    const footerLink = this.page.locator('footer a.footer__title', { hasText: 'Kariéra' });
+
+    await footerLink.scrollIntoViewIfNeeded();
+    await footerLink.click();
   }
 }
