@@ -6,7 +6,7 @@ export class GooglePage {
 
   async goto() {
     await humanDelay();
-    await this.page.goto('https://www.google.com');
+    await this.page.goto('https://google.com');
   }
 
   async search(query: string) {

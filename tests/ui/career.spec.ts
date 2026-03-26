@@ -6,14 +6,16 @@ import { humanDelay, acceptCookiesIfVisible } from '../../utils/helpers';
 
 test.describe('MoroSystems GUI Testing', () => {
 
-  test('Visit career page and filter available positions', async ({ page }) => {
+  test('Visit career page and filter available positions', async ({ browser }) => {
+    const context = await browser.newContext();
+    const page = await context.newPage();
 
     let google: GooglePage;
     let home: HomePage;
     let careers: CareersPage;
 
     await test.step('1: Open the Browser', async () => {
-        // handled automatically in PW
+      // handled automatically in PW
     });
 
     await test.step('2: Navigate to Google', async () => {
@@ -59,5 +61,7 @@ test.describe('MoroSystems GUI Testing', () => {
       await careers.filterByCity(city);
       await careers.validateResults(city);
     });
+
+    await context.close();
   });
 });
