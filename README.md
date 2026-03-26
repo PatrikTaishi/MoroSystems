@@ -1,20 +1,89 @@
-<h1>﻿# MoroSystems </h1>
+# MoroSystems – Test Automation Project
 
-  <h2>My Search application </h2>
+## Overview
 
-This project automates opening the MoroSystems Careers webpage through a web browsers (Chrome and Microsoft Edge)
-Allure reported added in dev dependencies.
+This project demonstrates **end-to-end test automation** using Playwright with:
 
-<b>Features:</b>
+- UI (Frontend) tests across multiple browsers  
+- API tests using Playwright request context  
+- Generated API client using OpenAPI/Swagger (TypeScript Axios)  
+- CI/CD pipeline using GitHub Actions  
 
-Opens Google search engine.
-Searches for "MoroSystems website".
-Opens the Careers tab on the MoroSystems website (if functionality is available in the browser).
+---
 
-<b>Requirements:</b>
-<br>Node v20.17.0</br>
+## Features
 
-<b>Instructions:</b>
-1. Clone this repository.
-2. Run "npm install" from command line
-3. Run "npm run test" for start spec test.e2e.ts
+### 🔹 UI Testing
+- Runs tests on:
+  - Chromium (Chrome)
+  - Firefox
+  - WebKit (Safari)
+- Automates browser interactions and validates UI behavior
+
+### 🔹 API Testing (Manual)
+- Tests REST endpoints:
+  - GET /tasks
+  - POST /tasks
+  - POST /tasks/{id}
+  - DELETE /tasks/{id}
+- Includes full CRUD validation with assertions
+
+### 🔹 API Testing (Generated Client)
+- Uses OpenAPI spec (`/v3/api-docs`)
+- Generated TypeScript Axios client
+- Fully typed requests and responses
+- Separate spec demonstrating usage
+
+---
+
+## Requirements
+
+- Node.js v20+
+- npm
+- Running backend API at:
+  http://localhost:8080
+
+---
+
+## Installation
+
+```bash
+git clone <your-repo-url>
+cd <project-folder>
+npm install
+```
+
+## Browsers Installation
+```bash
+npx playwright install
+```
+
+## Test scripts 
+Run all tests
+```bash
+npm run test
+```
+
+Run only API tests
+```bash
+npm run test:api
+```
+
+Run UI tests in all browsers:
+```bash
+npm run test:ui:all
+```
+
+Run UI tests in in Chromium:
+```bash
+npm run test:ui
+```
+
+Run tests in headed mode:
+```bash
+npm run test:headed
+```
+
+Open Playwright report:
+```bash
+npm run report
