@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 import { GooglePage } from '../../pages/GooglePage';
-import { HomePage } from '../../pages/HomePage';
+import { HomePage } from '../../pages/MoroSystemsHomePage';
 import { CareersPage } from '../../pages/CareersPage';
 import { humanDelay, acceptCookiesIfVisible } from '../../utils/helpers';
 
@@ -13,6 +13,7 @@ test.describe('MoroSystems GUI Testing', () => {
     let careers: CareersPage;
 
     await test.step('1: Open the Browser', async () => {
+        // handled automatically in PW
     });
 
     await test.step('2: Navigate to Google', async () => {
@@ -39,6 +40,7 @@ test.describe('MoroSystems GUI Testing', () => {
     });
 
     await test.step('6: Visit the "Kariéra" Page', async () => {
+
       home = new HomePage(page);
 
       await page.waitForLoadState('networkidle');
