@@ -8,7 +8,7 @@
     "test:ui": "playwright test --project=chromium",
     "test:ui:all": "playwright test --project=chromium,firefox,webkit",
     "report": "playwright show-report",
-    "test:headed": "playwright test --headed",
+    "test:headed": "playwright test --headed"
   },
   "keywords": [],
   "author": "Patrik Popelic",
